@@ -8,7 +8,7 @@ import javax.inject.Singleton;
 @Singleton
 public class UserMapper {
 
-    public ru.bank.domain.User updatedUserToUserDto(UpdatedUser user) {
+    public ru.bank.domain.User updatedUserToUserDomain(UpdatedUser user) {
         var result = new ru.bank.domain.User();
         result.setId(user.getId());
         result.setName(user.getName());

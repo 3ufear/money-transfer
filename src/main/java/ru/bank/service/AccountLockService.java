@@ -24,7 +24,7 @@ public class AccountLockService {
 
     public void release(final String lockId) {
         Optional.ofNullable(locks.get(lockId))
-                .ifPresent(lock -> lock.unlock());
+                .ifPresent(ReentrantLock::unlock);
     }
 
     private void acquireLock(final String lockId, final ReentrantLock lock) {

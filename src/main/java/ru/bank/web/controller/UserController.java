@@ -53,7 +53,7 @@ public class UserController {
     public HttpResponse<User> updateUser(@Body @Valid final UpdatedUser updatedUser) {
         final User user = userMapper.userDomainToDto(
                 userService.updateUser(
-                        userMapper.updatedUserToUserDto(updatedUser)
+                        userMapper.updatedUserToUserDomain(updatedUser)
                 ));
         return HttpResponse.ok(user);
     }

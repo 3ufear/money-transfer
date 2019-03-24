@@ -71,7 +71,7 @@ public class UserAccountController {
         return HttpResponse.ok(account);
     }
 
-    @Put(uri = "/transfer/{from}/{to}")
+    @Post(uri = "/transfer/{from}/{to}")
     @Consumes("application/json")
     @Produces("application/json")
     public HttpResponse<Account> performTransfer(@PathVariable @NotNull final UUID from,@PathVariable @NotNull final UUID to,

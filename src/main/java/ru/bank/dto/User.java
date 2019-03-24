@@ -5,6 +5,7 @@ import io.micronaut.validation.Validated;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
@@ -17,6 +18,7 @@ public class User {
     private UUID id;
 
     @NotNull
+    @NotBlank
     @JsonProperty("name")
     private String name;
 
